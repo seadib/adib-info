@@ -43,23 +43,23 @@
             --accent: #1e40af;
             --accent2: #3b82f6;
             --accent3: #06b6d4;
-            --text: #0f172a;
-            --text2: #334155;
-            --text3: #475569;
+            --text: #000000;          /* pure black for maximum readability */
+            --text2: #000000;
+            --text3: #000000;
             --border: rgba(0, 0, 0, 0.08);
             --glow: rgba(37, 99, 235, 0.25);
             --glow-pink: rgba(6, 182, 212, 0.35);
             --nav-bg: rgba(255, 255, 255, 0.8);
             --modal-overlay: rgba(15, 23, 42, 0.4);
             --modal-bg: rgba(255, 255, 255, 0.85);
-            --btn-outline-text: #0f172a;
+            --btn-outline-text: #000000;
             --hero-gradient: linear-gradient(135deg, #1e3a8a, #06b6d4);
             --section-title-gradient: linear-gradient(135deg, #1e3a8a, #0ea5e9);
             --blur-amount: 22px;
-            --placeholder-color: #334155;
-            --footer-color: #1e293b;
-            --stat-label-color: #475569;
-            --contact-link-color: var(--text);   /* black in light mode */
+            --placeholder-color: #000000;
+            --footer-color: #000000;
+            --stat-label-color: #000000;
+            --contact-link-color: #000000;   /* plain black links */
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -443,7 +443,6 @@
             const themeToggle = document.getElementById('themeToggle');
             const html = document.documentElement;
             function setTheme(theme) { html.setAttribute('data-theme', theme); localStorage.setItem('theme', theme); themeToggle.innerHTML = theme === 'dark' ? '🌙' : '☀️'; }
-            // Default to dark if no saved preference
             const saved = localStorage.getItem('theme') || 'dark';
             setTheme(saved);
             themeToggle.addEventListener('click', () => {
