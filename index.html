@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abdullah Al Adib — Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
     <style>
+        /* ===== সব স্টাইল ===== */
         :root, [data-theme="dark"] {
             --bg: #0a0a0f;
             --surface: rgba(18, 18, 26, 0.7);
@@ -43,7 +44,7 @@
             --accent: #1e40af;
             --accent2: #3b82f6;
             --accent3: #06b6d4;
-            --text: #000000;          /* pure black for maximum readability */
+            --text: #000000;
             --text2: #000000;
             --text3: #000000;
             --border: rgba(0, 0, 0, 0.08);
@@ -59,7 +60,7 @@
             --placeholder-color: #000000;
             --footer-color: #000000;
             --stat-label-color: #000000;
-            --contact-link-color: #000000;   /* plain black links */
+            --contact-link-color: #000000;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -94,7 +95,7 @@
 
         .hero { display: flex; align-items: center; gap: 50px; min-height: 100vh; padding-top: 40px; flex-wrap: wrap; justify-content: center; text-align: center; position: relative; }
         .hero-avatar-wrap { 
-            position: relative; width: 200px; height: 200px; border-radius: 50%; 
+            position: relative; width: 280px; height: 280px; border-radius: 50%; 
             border: 4px solid transparent; background-color: var(--bg); 
             background-origin: border-box; background-clip: padding-box, border-box; 
             background-image: linear-gradient(var(--bg), var(--bg)), 
@@ -186,7 +187,8 @@
         .project-card:hover { border-color: var(--accent); box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4); transform: translateY(-4px); }
         .project-title { display: flex; align-items: center; gap: 8px; font-size: 1.1rem; font-weight: 600; color: var(--text); margin-bottom: 6px; pointer-events: none; }
         .project-title svg { width: 18px; height: 18px; stroke: var(--accent2); fill: none; stroke-width: 2; }
-        .project-card .tag { display: inline-block; background: var(--surface2); padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; color: var(--accent3); margin-top: 8px; }
+        .project-card .tag { display: inline-block; background: var(--surface2); padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; margin-top: 8px; }
+        .project-card .tag a { color: #ffffff !important; text-decoration: none; }
 
         .stagger-item { opacity: 0; transform: translateY(25px); transition: opacity 0.6s ease, transform 0.6s ease; }
         .stagger-item.show { opacity: 1; transform: translateY(0); }
@@ -235,7 +237,7 @@
 
         @media (max-width: 768px) {
             .hero { flex-direction: column; min-height: auto; padding: 100px 0 40px; gap: 30px; }
-            .hero-avatar-wrap { width: 150px; height: 150px; }
+            .hero-avatar-wrap { width: 200px; height: 200px; }
             .floating-nav { gap: 2px; padding: 6px 6px; top: 12px; }
             .floating-nav a { padding: 8px 12px; font-size: 0.75rem; }
             .timeline-line { left: 25px; }
@@ -260,11 +262,12 @@
     </nav>
 
     <div class="main-wrapper">
+        <!-- ===== HERO ===== -->
         <section class="hero" id="hero">
             <div class="liquid-blob"></div>
             <div class="hero-left">
                 <div class="hero-avatar-wrap">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEpPMtV9__aY5t1hjzSAfEacBH0wPSn3aXeOAXgdlWSCJJiMPmoPDZ5qJDofB-UyF5j0g9gKsygAQVZoPFnzxhVIXplRZ2cgL021gPyshe0uhVdS_V2jVJMlvR9NgrLxG7mZS4sBW6p5eU_qiVYFxOfUCMruvRoMKro0MxVt-581rWFRb_xMRqM6j6b4A/s720/1000025629.jpg" alt="Abdullah Al Adib" class="hero-avatar" loading="eager">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEpPMtV9__aY5t1hjzSAfEacBH0wPSn3aXeOAXgdlWSCJJiMPmoPDZ5qJDofB-UyF5j0g9gKsygAQVZoPFnzxhVIXplRZ2cgL021gPyshe0uhVdS_V2jVJMlvR9NgrLxG7mZS4sBW6p5eU_qiVYFxOfUCMruvRoMKro0MxVt-581rWFRb_xMRqM6j6b4A/s720/1000025629.jpg" alt="Abdullah Al Adib" class="hero-avatar" loading="eager" />
                 </div>
             </div>
             <div class="hero-right">
@@ -272,7 +275,7 @@
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                     Aspiring Software Engineer
                 </div>
-                <h1>Abdullah<br>Al Adib</h1>
+                <h1>Abdullah<br />Al Adib</h1>
                 <h2>Dhaka College • HSC 2027 • Builder of Small Apps & Websites</h2>
                 <div class="hero-cta">
                     <a href="#projects" class="btn btn-primary">
@@ -291,24 +294,25 @@
             </div>
         </section>
 
+        <!-- ===== STATS ===== -->
         <div class="stats-row stagger-grid">
-            <div class="stat-card stagger-item"><div class="stat-number" data-target="4">0</div><div class="stat-label">Projects</div></div>
+            <div class="stat-card stagger-item"><div class="stat-number" data-target="5">0</div><div class="stat-label">Projects</div></div>
             <div class="stat-card stagger-item"><div class="stat-number" data-target="32">0</div><div class="stat-label">Learning (mo)</div></div>
             <div class="stat-card stagger-item"><div class="stat-number visitor-count" data-target="">0</div><div class="stat-label">Visits</div></div>
         </div>
 
+        <!-- ===== PROFILE ===== -->
         <section id="profile">
             <div class="section-title"><span>Profile</span></div>
             <div class="profile-card stagger-grid glass">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEpPMtV9__aY5t1hjzSAfEacBH0wPSn3aXeOAXgdlWSCJJiMPmoPDZ5qJDofB-UyF5j0g9gKsygAQVZoPFnzxhVIXplRZ2cgL021gPyshe0uhVdS_V2jVJMlvR9NgrLxG7mZS4sBW6p5eU_qiVYFxOfUCMruvRoMKro0MxVt-581rWFRb_xMRqM6j6b4A/s720/1000025629.jpg" alt="Abdullah" class="pfp-sm stagger-item">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEpPMtV9__aY5t1hjzSAfEacBH0wPSn3aXeOAXgdlWSCJJiMPmoPDZ5qJDofB-UyF5j0g9gKsygAQVZoPFnzxhVIXplRZ2cgL021gPyshe0uhVdS_V2jVJMlvR9NgrLxG7mZS4sBW6p5eU_qiVYFxOfUCMruvRoMKro0MxVt-581rWFRb_xMRqM6j6b4A/s720/1000025629.jpg" alt="Abdullah" class="pfp-sm stagger-item" />
                 <div class="profile-info stagger-item">
                     <h3>Abdullah Al Adib</h3>
                     <p class="sub">Dhaka College • HSC 2027</p>
-                    <p class="bio"><strong>About Me</strong><br>
-                    I'm studying in the science department at Dhaka College. I build small apps and websites, and I try to learn something new every day.<br>
+                    <p class="bio"><strong>About Me</strong><br />
+                    I'm studying in the science department at Dhaka College. I build small apps and websites, and I try to learn something new every day.<br />
                     <span style="display:flex;align-items:center;gap:4px;margin-top:6px;">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent3)" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-                        <em>Goal — to create something no one has done before!</em>
+                        <em style="font-style:italic;">Goal — to create something no one has done before!</em>
                     </span>
                     </p>
                     <div class="contact-links">
@@ -327,6 +331,13 @@
                         <a href="https://wa.me/8801625329874" target="_blank">
                             <svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
                             WhatsApp
+                        </a>
+                        <!-- ✅ Telegram with correct logo -->
+                        <a href="https://t.me/DrSahitto" target="_blank">
+                            <svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                            </svg>
+                            Telegram
                         </a>
                         <a href="https://github.com/seadib" target="_blank">
                             <svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -351,29 +362,46 @@
             </div>
         </section>
 
+        <!-- ===== PROJECTS ===== -->
         <section id="projects">
             <div class="section-title"><span>Featured Projects</span></div>
             <div class="grid-2 stagger-grid">
+
+                <!-- ১. My Personal Blog -->
                 <div class="project-card stagger-item glass" data-url="https://seadib.blogspot.com" data-name="seadib.blogspot.com">
                     <div class="project-title"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> My Personal Blog</div>
-                    <span class="tag">Blog</span>
+                    <span class="tag"><a href="https://seadib.blogspot.com" target="_blank">seadib.blogspot.com</a></span>
                 </div>
-                <div class="project-card stagger-item glass" data-url="https://drsahitto.blogspot.com/" data-name="drsahitto.blogspot.com">
+
+                <!-- ২. Literature Website -->
+                <div class="project-card stagger-item glass" data-url="https://drsahitto.blogspot.com" data-name="drsahitto.blogspot.com">
                     <div class="project-title"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> Literature Website</div>
-                    <span class="tag">Literature</span>
+                    <span class="tag"><a href="https://drsahitto.blogspot.com" target="_blank">drsahitto.blogspot.com</a></span>
                 </div>
+
+                <!-- ৩. Dhaka College Hall Website -->
                 <div class="project-card stagger-item glass" data-url="https://dchall.netlify.app" data-name="dchall.netlify.app">
                     <div class="project-title"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Dhaka College Hall Website</div>
-                    <span class="tag">Web App</span>
+                    <span class="tag"><a href="https://dchall.netlify.app" target="_blank">dchall.netlify.app</a></span>
                 </div>
+
+                <!-- ৪. DrX Voice Typing – data-name পরিবর্তন করা হয়েছে -->
+                <div class="project-card stagger-item glass" data-url="https://seadib.github.io/voice/" data-name="seadib.github.io/voice/">
+                    <div class="project-title"><svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg> DrX Voice Typing</div>
+                    <span class="tag"><a href="https://seadib.github.io/voice/" target="_blank">seadib.github.io/voice/</a></span>
+                </div>
+
+                <!-- ৫. Experimental Apps -->
                 <div class="project-card stagger-item glass">
                     <div class="project-title"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg> Experimental Apps</div>
                     <p style="color:var(--text2);font-size:0.85rem;">Various small experimental tools & utilities</p>
-                    <span class="tag">Experiments</span>
+                    <span class="tag" style="color:#ffffff;">Experiments</span>
                 </div>
+
             </div>
         </section>
 
+        <!-- ===== SKILLS ===== -->
         <section id="skills">
             <div class="section-title"><span>Technical Skills</span></div>
             <div class="grid-2 stagger-grid">
@@ -388,6 +416,7 @@
             </div>
         </section>
 
+        <!-- ===== JOURNEY ===== -->
         <section id="journey">
             <div class="section-title"><span>Journey Timeline</span></div>
             <div class="timeline-wrapper">
@@ -399,18 +428,20 @@
             </div>
         </section>
 
+        <!-- ===== CONTACT ===== -->
         <section id="contact">
             <div class="section-title"><span>Get In Touch</span></div>
-            <form class="contact-form stagger-grid" onsubmit="handleSubmit(event)">
-                <input type="text" placeholder="Your Name" required class="stagger-item">
-                <input type="email" placeholder="Your Email" required class="stagger-item">
-                <textarea rows="4" placeholder="How can I help you?" required class="stagger-item"></textarea>
+            <form class="contact-form stagger-grid" id="contactForm">
+                <input type="hidden" name="access_key" value="02b89c0d-9b17-49dd-bd02-ee2c1dee8a9d" />
+                <input type="text" name="name" placeholder="Your Name" required class="stagger-item" />
+                <input type="email" name="email" placeholder="Your Email" required class="stagger-item" />
+                <textarea rows="4" name="message" placeholder="How can I help you?" required class="stagger-item"></textarea>
                 <button type="submit" class="btn btn-primary stagger-item">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
                     Send Message
                 </button>
             </form>
-            <p id="formMsg" style="text-align:center;margin-top:12px;color:var(--accent2);display:none;"></p>
+            <div id="formResult" style="text-align:center;margin-top:12px;font-weight:bold;"></div>
         </section>
 
         <div class="footer">
@@ -418,6 +449,7 @@
         </div>
     </div>
 
+    <!-- ===== MODALS ===== -->
     <div class="modal-overlay" id="projectModal">
         <div class="modal-box glass">
             <p id="modalMessage">Do you want to visit this website?</p>
@@ -438,11 +470,17 @@
         </div>
     </div>
 
+    <!-- ===== SCRIPT ===== -->
     <script>
         (function() {
+            // থিম টগল
             const themeToggle = document.getElementById('themeToggle');
             const html = document.documentElement;
-            function setTheme(theme) { html.setAttribute('data-theme', theme); localStorage.setItem('theme', theme); themeToggle.innerHTML = theme === 'dark' ? '🌙' : '☀️'; }
+            function setTheme(theme) { 
+                html.setAttribute('data-theme', theme); 
+                localStorage.setItem('theme', theme); 
+                themeToggle.innerHTML = theme === 'dark' ? '🌙' : '☀️'; 
+            }
             const saved = localStorage.getItem('theme') || 'dark';
             setTheme(saved);
             themeToggle.addEventListener('click', () => {
@@ -450,6 +488,7 @@
                 setTheme(current === 'dark' ? 'light' : 'dark');
             });
 
+            // ভিজিটর কাউন্ট
             function updateVisitorCount() {
                 let visits = localStorage.getItem('visitorCount');
                 visits = visits ? parseInt(visits) + 1 : 1;
@@ -459,11 +498,13 @@
             }
             updateVisitorCount();
 
+            // পার্টিকেল ক্যানভাস
             const canvas = document.getElementById('particleCanvas');
             const ctx = canvas.getContext('2d');
             let particles = [], w, h;
             function resize() { w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight; }
-            resize(); window.addEventListener('resize', () => { resize(); initParticles(); });
+            resize(); 
+            window.addEventListener('resize', () => { resize(); initParticles(); });
             const hues = [210, 190, 260];
             class Particle {
                 constructor() { this.reset(); }
@@ -484,17 +525,20 @@
             }
             animate();
 
+            // কার্সর গ্লো
             const cursorGlow = document.getElementById('cursorGlow');
             document.addEventListener('mousemove', e => { cursorGlow.style.left=e.clientX+'px'; cursorGlow.style.top=e.clientY+'px'; });
             document.addEventListener('mouseleave', ()=> cursorGlow.style.opacity='0');
             document.addEventListener('mouseenter', ()=> cursorGlow.style.opacity='1');
 
+            // স্ক্রল প্রোগ্রেস
             const scrollProgress = document.getElementById('scrollProgress');
             window.addEventListener('scroll', ()=>{
                 const st = document.documentElement.scrollTop, sh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
                 scrollProgress.style.width = (st/sh)*100 + '%';
             });
 
+            // নেভিগেশন অ্যাকটিভ
             const floatingNav = document.getElementById('floatingNav');
             const navLinks = floatingNav.querySelectorAll('a');
             window.addEventListener('scroll', ()=>{
@@ -504,6 +548,7 @@
                 navLinks.forEach(link => { link.classList.remove('active'); if(link.getAttribute('href')==='#'+current) link.classList.add('active'); });
             });
 
+            // স্ট্যাগার অ্যানিমেশন ও স্কিল বার
             const staggerObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if(entry.isIntersecting) {
@@ -538,21 +583,55 @@
                 const timer = setInterval(() => { current += step; if(current >= target) { el.textContent = target; clearInterval(timer); } else el.textContent = Math.floor(current); }, 16);
             }
 
-            window.handleSubmit = function(e) {
+            // Web3Forms ফর্ম সাবমিশন
+            const form = document.getElementById('contactForm');
+            const resultDiv = document.getElementById('formResult');
+            form.addEventListener('submit', function(e) {
                 e.preventDefault();
-                const msg = document.getElementById('formMsg'); msg.style.display='block'; msg.textContent='✅ Message sent successfully! (Demo)';
-                e.target.reset(); setTimeout(() => msg.style.display='none', 3500);
-            };
+                const formData = new FormData(form);
+                const json = JSON.stringify(Object.fromEntries(formData));
+                resultDiv.innerHTML = "⏳ Sending...";
+                resultDiv.style.color = "blue";
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: json
+                })
+                .then(async (response) => {
+                    let res = await response.json();
+                    if (response.status == 200) {
+                        resultDiv.innerHTML = "✅ Thanks for contacting me! I will get back to you soon.";
+                        resultDiv.style.color = "green";
+                        form.reset();
+                    } else {
+                        resultDiv.innerHTML = "❌ " + (res.message || "Something went wrong. Please try again.");
+                        resultDiv.style.color = "red";
+                    }
+                })
+                .catch(error => {
+                    console.error(error);
+                    resultDiv.innerHTML = "❌ Network error. Please check your connection and try again.";
+                    resultDiv.style.color = "red";
+                });
+            });
 
+            // প্রজেক্ট মোডাল
             const projectModal = document.getElementById('projectModal'), modalMsg = document.getElementById('modalMessage'), modalVisit = document.getElementById('modalVisit'), modalCancel = document.getElementById('modalCancel');
             let pendingUrl = '';
             document.querySelectorAll('.project-card[data-url]').forEach(card => {
-                card.addEventListener('click', function(e) { e.stopPropagation(); pendingUrl = this.getAttribute('data-url'); modalMsg.textContent = `Do you want to visit ${this.getAttribute('data-name') || 'this website'}?`; projectModal.classList.add('active'); });
+                card.addEventListener('click', function(e) { 
+                    e.stopPropagation(); 
+                    pendingUrl = this.getAttribute('data-url'); 
+                    // data-name ব্যবহার করেই মেসেজ তৈরি হবে
+                    modalMsg.textContent = `Do you want to visit ${this.getAttribute('data-name') || 'this website'}?`; 
+                    projectModal.classList.add('active'); 
+                });
             });
             modalVisit.addEventListener('click', ()=>{ if(pendingUrl) window.open(pendingUrl, '_blank'); projectModal.classList.remove('active'); pendingUrl=''; });
             modalCancel.addEventListener('click', ()=>{ projectModal.classList.remove('active'); pendingUrl=''; });
             projectModal.addEventListener('click', function(e) { if(e.target===projectModal) { projectModal.classList.remove('active'); pendingUrl=''; } });
 
+            // লোকেশন মোডাল
             const locModal = document.getElementById('locationModal'), locVisit = document.getElementById('locationModalVisit'), locCancel = document.getElementById('locationModalCancel');
             let mapUrl = '';
             document.querySelector('.info-card.location-card').addEventListener('click', ()=>{ mapUrl = 'https://www.google.com/maps/search/?api=1&query=Hatiya+Island+Noakhali'; locModal.classList.add('active'); });
@@ -560,6 +639,7 @@
             locCancel.addEventListener('click', ()=>{ locModal.classList.remove('active'); mapUrl=''; });
             locModal.addEventListener('click', function(e) { if(e.target===locModal) { locModal.classList.remove('active'); mapUrl=''; } });
 
+            // প্রারম্ভিক অ্যানিমেশন
             setTimeout(() => {
                 document.querySelectorAll('.stagger-grid').forEach(grid => {
                     if(grid.getBoundingClientRect().top < window.innerHeight) grid.querySelectorAll('.stagger-item').forEach((item, idx) => setTimeout(() => item.classList.add('show'), idx*80));
